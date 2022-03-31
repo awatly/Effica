@@ -9,8 +9,8 @@
   <link rel="shortcut icon" href="assets/images/effitechlogo-336x336.png" type="image/x-icon">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:image" content="https://raw.githubusercontent.com/effi-tech/effitech/main/effica_twitter.png" /> 
-  <meta property="og:url" content="https://effi-tech.github.io/effitech/" /> <!--③-->
+  <meta property="og:image" content="https://raw.githubusercontent.com/awatly/Effica/main/effica_twitter.png" /> 
+  <meta property="og:url" content="https://awatly.github.io/Effica" /> <!--③-->
   <meta property="og:title" content="Vyond効率化の完全ガイド" /> <!--④-->
   <meta property="og:description" content="もし編集時間が３割減ったら、何しよう？
 真似するだけで編集効率アップ！高時給を目指す人へのVYOND効率化講座" /> <!--⑤-->
@@ -457,7 +457,7 @@
 <!--                                     <p class="mbr-text mbr-fonts-style col-right mbr-black align-center display-2">19,800円<br><strike>24,800円</strike></p> -->
                                     <p class="mbr-text mbr-fonts-style col-right mbr-black align-center display-2">24,800円</p>
                                     <!--Btn-->
-                                    <div class="mbr-section-btn col-right align-center"><button type="button" id="checkout-button-price_1ICgDsDD6lRICkhFLdVFcKdF" class="btn m-0 btn-primary display-4">お申し込みはこちら</button></div>
+                                    <div class="mbr-section-btn col-right align-center"><a href='https://buy.stripe.com/4gw00g329flLa763cg' type="button" id="checkout-button-price_1ICgDsDD6lRICkhFLdVFcKdF" class="btn m-0 btn-primary display-4">お申し込みはこちら</a></div>
                                 </div>
                             </div>
                         </div>
@@ -503,7 +503,7 @@
     <div class="container">
         <div class="media-container-row align-center mbr-white">
             <div class="col-12">
-                <p class="mbr-text mb-0 mbr-fonts-style display-7"><a href="page1.html" class="text-white">特商法取引法に基づく表記</a>　<a href="page2.html" class="text-white">よくある質問</a>　<a href="page3.html" class="text-white">お問い合わせ</a><br>© Copyright 2020 Effitech - All Rights Reserved</p>
+                <p class="mbr-text mb-0 mbr-fonts-style display-7"><a href="page1.html" class="text-white">特商法取引法に基づく表記</a>　<a href="page2.html" class="text-white">よくある質問</a>　<a href="page3.html" class="text-white">お問い合わせ</a><br>© Copyright 2022 Awatly - All Rights Reserved</p>
             </div>
         </div>
     </div>
@@ -527,38 +527,6 @@
 
 <div id="error-message"></div>
 
-<script>
-(function() {
-  var stripe = Stripe('pk_live_51HCmmlDD6lRICkhFZlfXGFAAI3Is3QduqcVQ0zuP83qz54V6W9ZWwQFIkWHy6NOlZhC7q3kFlGxhNWhRp1ebS19200SbOyWkRy');
-  var checkoutButton = document.getElementById('checkout-button-price_1ICgDsDD6lRICkhFLdVFcKdF');
-  checkoutButton.addEventListener('click', function () {
-    stripe.redirectToCheckout({
-//       lineItems: [{price: 'price_1ICgDsDD6lRICkhFLdVFcKdF', quantity: 1}],
-      lineItems: [{price: 'price_1IRdxsDD6lRICkhFmlVuEht5', quantity: 1}],
-      mode: 'payment',
-      /*
-       * Do not rely on the redirect to the successUrl for fulfilling
-       * purchases, customers may not always reach the success_url after
-       * a successful payment.
-       * Instead use one of the strategies described in
-       * https://stripe.com/docs/payments/checkout/fulfill-orders
-       */
-      successUrl: 'https://effi-tech.github.io/effitech_thanks/?utm_source=' + location.search.substring(1) + '&utm_medium=sns&utm_campaign=seminar_ma_btob&utm_content=text_A',
-      cancelUrl: 'https://effi-tech.github.io/effitech',
-    })
-    .then(function (result) {
-      if (result.error) {
-        /*
-         * If `redirectToCheckout` fails due to a browser or network
-         * error, display the localized error message to your customer.
-         */
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
   
   <!-- Twitter universal website tag code -->
 <script>
